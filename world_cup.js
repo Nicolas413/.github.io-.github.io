@@ -82,7 +82,7 @@ const layout = {
             y: 0.55,  // Posición relativa en el eje Y (de abajo hacia arriba)
             xref: 'paper',
             yref: 'paper',
-            text: 'México será el primer país en ser anfitrión <br> de <span style="color:red;">3 Mundiales de Fútbol</span> el <span style="color:blue;">2026</span>',
+            text: 'México será el primer país en ser anfitrión <br> de <span style="color:blue;">3 Mundiales de Fútbol</span> el <span style="color:blue;">2026</span>',
             showarrow: true,
             arrowhead: 2,
             ax: -140,    // Desplazamiento en píxeles (dirección horizontal de la flecha)
@@ -98,10 +98,10 @@ const layout = {
             y: 0.8,
             xref: 'paper',
             yref: 'paper',
-            text: 'Canadá será anfitrión de su <br><span style="color:red;"> Primer Mundial de Fútbol</span> el <span style="color:blue;">2026</span>',
+            text: 'Canadá será anfitrión de su <br><span style="color:blue;"> Primer Mundial de Fútbol</span> el <span style="color:blue;">2026</span>',
             showarrow: true,
             arrowhead: 2,
-            ax: -100,   // Desplazamiento de la flecha
+            ax: -120,   // Desplazamiento de la flecha
             ay: -60,
             font: {
                 family: 'Helvetica, sans-serif',
