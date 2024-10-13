@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup Map</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            background-color: #0f4c81;
+            font-family: Helvetica;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .data-view {
+            flex-basis: 25%; /* Ancho de la zona de visualización */
+            background-color: #eaebea;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-right: 2px solid #ccc;
+        }
+
+        .data-view h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .data-view p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .map-view {
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .legend-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        font-family: Helvetica, sans-serif;
+        }
+
+        .legend-container h4 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Zona del mapa -->
+        <div class="map-view">
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Bloque de la leyenda -->
+    <div id="legend" class="legend-container">
+        <h4>Cantidad de Mundiales</h4>
+        <div class="legend-item">
+            <div class="color-box" style="background: #e6e6e6;"></div>
+            <span>0 (No sede)</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background: rgb(247, 202, 202);"></div>
+            <span>1</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background: rgb(210, 172, 185);"></div>
+            <span>2</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background: rgb(169, 145, 167);"></div>
+            <span>3</span>
+        </div>
+    </div>
+    
+
+<!-- Incluir los scripts externos -->
+<script src="world_cup_data.js"></script> <!-- Datos del mundial -->
+<script src="world_cup.js"></script> <!-- Lógica para el mapa -->
+</body>
+</html>
