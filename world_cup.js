@@ -85,8 +85,10 @@ const layout = {
             text: 'México será el primer país en ser anfitrión <br> de <span style="color:blue;">3 Mundiales de Fútbol</span> el <span style="color:blue;">2026</span>',
             showarrow: true,
             arrowhead: 2,
-            ax: -140,    // Desplazamiento en píxeles (dirección horizontal de la flecha)
-            ay: 40,     // Desplazamiento en píxeles (dirección vertical de la flecha)
+            ax: 0.15,    // Desplazamiento en porcentaje relativo al ancho del gráfico
+            ay: 0.45,     // Desplazamiento en porcentaje relativo a la altura del gráfico
+            axref: 'paper',  // Usar el sistema de referencia relativo 'paper' para ax
+            ayref: 'paper',  // Usar el sistema de referencia relativo 'paper' para ay
             font: {
                 family: 'Helvetica, sans-serif',
                 size: 12,
@@ -101,8 +103,10 @@ const layout = {
             text: 'Canadá será anfitrión de su <br><span style="color:blue;"> Primer Mundial de Fútbol</span> el <span style="color:blue;">2026</span>',
             showarrow: true,
             arrowhead: 2,
-            ax: -160,   // Desplazamiento de la flecha
-            ay: -60,
+            ax: 0.15,   // Desplazamiento relativo en porcentaje
+            ay: 0.95,
+            axref: 'paper',
+            ayref: 'paper',
             font: {
                 family: 'Helvetica, sans-serif',
                 size: 12,
@@ -110,15 +114,12 @@ const layout = {
             },
         },
         {
-            x: 0,   // Ajusta la posición relativa para Canadá
-            y: 0 ,
+            x: 0,   // Ajusta la posición relativa para el tercer texto
+            y: 0,
             xref: 'paper',
             yref: 'paper',
             text: '¿Sabías que el Mundial de 2026<br> será el primero en la historia en ser organizado por tres países?<br> Estos son: <b>Canadá, México y Estados Unidos</b>.',
             showarrow: false,
-            arrowhead: 2,
-            ax: -130,   // Desplazamiento de la flecha
-            ay: -80,
             font: {
                 family: 'Helvetica, sans-serif',
                 size: 12,
@@ -127,6 +128,7 @@ const layout = {
         }
     ]
 };
+
 
 // Configuración para desactivar el zoom y el arrastre, pero mantener hover
 const config = {
