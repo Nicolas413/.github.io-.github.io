@@ -85,7 +85,7 @@ const layout = {
             text: 'México será el primer país en ser anfitrión <br> de <span style="color:blue;">3 Mundiales de Fútbol</span> el <span style="color:blue;">2026</span>',
             showarrow: true,
             arrowhead: 2,
-            ax: 0.15,    // Desplazamiento en porcentaje relativo al ancho del gráfico
+            ax: 0.1,    // Desplazamiento en porcentaje relativo al ancho del gráfico
             ay: 0.45,     // Desplazamiento en porcentaje relativo a la altura del gráfico
             axref: 'paper',  // Usar el sistema de referencia relativo 'paper' para ax
             ayref: 'paper',  // Usar el sistema de referencia relativo 'paper' para ay
@@ -96,7 +96,7 @@ const layout = {
             },
         },
         {
-            x: 0.3,   // Ajusta la posición relativa para Canadá
+            x: 0.25,   // Ajusta la posición relativa para Canadá
             y: 0.8,
             xref: 'paper',
             yref: 'paper',
