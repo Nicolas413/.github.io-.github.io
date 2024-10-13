@@ -83,6 +83,85 @@
             margin-right: 10px;
             border: 1px solid #ccc;
         }
+        
+
+        .infolayer {
+            /* Contenedor principal de la información */
+            width: 100%; /* Asegura que ocupe todo el ancho disponible */
+            height: auto; /* Permite que la altura se ajuste automáticamente */
+        }
+
+        .gtitle {
+            font-family: Helvetica, sans-serif; /* Fuente del título */
+            font-weight: bold; /* Negrita para el título */
+            fill: rgb(68, 68, 68); /* Color del texto */
+            font-size: 2vw; /* Tamaño de fuente responsivo basado en el ancho de la ventana */
+            white-space: pre; /* Mantiene el espacio en blanco */
+        }
+
+        .annotation-text {
+            font-family: Helvetica, sans-serif; /* Fuente para el texto de la anotación */
+            font-size: 1.5vw; /* Tamaño de fuente responsivo basado en el ancho de la ventana */
+            fill: rgb(0, 0, 0); /* Color del texto */
+            white-space: pre; /* Mantiene el espacio en blanco */
+        }
+
+        .annotation-arrow-g path {
+            stroke-width: 2px; /* Grosor de la flecha */
+            stroke: rgb(0, 0, 0); /* Color de la flecha */
+        }
+
+        .cursor-pointer {
+            cursor: pointer; /* Cambia el cursor al pasar sobre las anotaciones */
+        }
+
+        /* Ajustes de la posición de las anotaciones */
+        .annotation {
+            opacity: 1; /* Asegura que las anotaciones sean visibles */
+        }
+
+        .bg {
+            fill: rgba(0, 0, 0, 0); /* Fondo transparente para el área de clic */
+        }
+
+        /* Opcional: agrega margen o padding si es necesario */
+        .annotation-text-g {
+            transform: scale(1); /* Permite escalado si es necesario */
+        }
+
+        .infolayer {
+            position: absolute; /* Posicionamiento absoluto para que se ajuste al contenedor */
+            width: 100%; /* Ancho completo del contenedor */
+            height: auto; /* Altura automática para ajustar el contenido */
+            top: 0; /* Posición inicial desde la parte superior */
+            left: 0; /* Posición inicial desde la parte izquierda */
+            display: flex; /* Usamos flexbox para alinear elementos si es necesario */
+            flex-direction: column; /* Dirección de los elementos hijos */
+            align-items: center; /* Alineación horizontal centrada */
+            justify-content: center; /* Alineación vertical centrada */
+            font-family: Helvetica, sans-serif; /* Fuente de texto */
+            font-size: 1vw; /* Tamaño de fuente responsivo */
+            color: rgb(68, 68, 68); /* Color de texto */
+            opacity: 1; /* Opacidad */
+            z-index: 10; /* Asegúrate de que esté sobre otros elementos */
+        }
+
+        /* Ajustes específicos para el texto */
+        .infolayer .gtitle {
+            font-size: 2vw; /* Ajustar el tamaño de la fuente para el título */
+            font-weight: bold; /* Negrita */
+            text-align: center; /* Centrar el texto */
+        }
+
+        .infolayer .annotation-text {
+            font-size: 1.5vw; /* Ajustar tamaño de la fuente para texto de anotaciones */
+        }
+
+        /* Asegúrate de que el SVG y otros elementos se ajusten también */
+        .infolayer svg {
+            width: 100%; /* Ajustar el SVG al contenedor */
+            height: auto; /* Mantener la relación de aspecto */
+        }
 
     </style>
 </head>

@@ -47,32 +47,10 @@ const data = [{
     }
 }];
 
-// Ajuste de las flechas
-
-// Obtener el tamaño del gráfico
-const getGraphSize = () => {
-    const width = document.getElementById('map').clientWidth; // Ancho del contenedor del gráfico
-    const height = document.getElementById('map').clientHeight; // Altura del contenedor del gráfico
-    return { width, height };
-};
-
-// Calcular el tamaño de la flecha y la cabeza de la flecha
-const calculateArrowProperties = () => {
-    const { width, height } = getGraphSize();
-    const sizeFactor = Math.min(width, height) / 100; // Factor basado en el tamaño del gráfico
-    return {
-        arrowsize: Math.max(1), // Tamaño mínimo de la flecha
-        arrowhead: Math.max(0.5) // Tamaño mínimo de la cabeza de flecha
-    };
-};
-
-// Obtener las propiedades de la flecha
-const { arrowsize, arrowhead } = calculateArrowProperties();
-
 // Opciones del layout del mapa
 const layout = {
     title: {
-        text: '<b style="font-size: 2vw;">Número de Veces que un País ha sido Anfitrión<br> de un Mundial de Fútbol</b>', // Usamos vw para hacer el título responsivo
+        text: '<b style="font-size: 1.5vw;">Número de Veces que un País ha sido Anfitrión<br> de un Mundial de Fútbol</b>', // Usamos vw para hacer el título responsivo
         font: {
             family: 'Helvetica, sans-serif'
         }
@@ -99,15 +77,15 @@ const layout = {
     dragmode: false,
     annotations: [
         {
-            x: 0.25,  // Posición relativa (25% en el eje X)
+            x: 0.24,  // Posición relativa (25% en el eje X)
             y: 0.55,  // Posición relativa (55% en el eje Y)
             xref: 'paper',
             yref: 'paper',
-            text: '<span style="font-size: 1vw;">México será el primer país en ser anfitrión de <br><em style="color:blue;">3 Mundiales de Fútbol</em> en el <em style="color:blue;">2026</em></span>', // Usamos span y em para estilos de color
+            text: '<span style="font-size: 0.8vw;">México será el primer país en ser anfitrión de <br><em style="color:blue;">3 Mundiales de Fútbol</em> en el <em style="color:blue;">2026</em></span>', // Usamos span y em para estilos de color
             showarrow: true,
-            arrowhead: arrowhead,
-            ax: 0.1,    // Flecha movida al 15% del ancho del gráfico
-            ay: 0.48,  // Posición de la flecha
+            arrowhead: 10,
+            ax: 0.1,   
+            ay: 0.48,  
             axref: 'paper', // Usamos píxeles para referencia
             ayref: 'paper', // Usamos píxeles para referencia
             font: {
@@ -116,16 +94,16 @@ const layout = {
                 color: '#000'
             },
             arrowcolor: 'black', // Cambia el color de la flecha
-            arrowsize: arrowsize, // Tamaño de la flecha (ajusta según el tamaño de la ventana)
+            arrowsize: 0.4, // Tamaño de la flecha (ajusta según el tamaño de la ventana)
         },
         {
-            x: 0.25,   // Ajusta la posición relativa para Canadá
+            x: 0.23,   // Ajusta la posición relativa para Canadá
             y: 0.8,
             xref: 'paper',
             yref: 'paper',
-            text: '<span style="font-size: 1vw;">Canadá será anfitrión de su <br><em style="color:blue;">primer Mundial de Fútbol</em> en el <em style="color:blue;">2026</em></span>', // Cambio de color con etiquetas HTML
+            text: '<span style="font-size: 0.8vw;">Canadá será anfitrión de su <br><em style="color:blue;">primer Mundial de Fútbol</em> en el <em style="color:blue;">2026</em></span>', // Cambio de color con etiquetas HTML
             showarrow: true,
-            arrowhead: arrowhead,
+            arrowhead: 10,
             ax: 0.1,   // Flecha relativa en porcentaje
             ay: 0.95,   // Posición de la flecha
             axref: 'paper', // Usamos píxeles para referencia
@@ -136,14 +114,14 @@ const layout = {
                 color: '#000'
             },
             arrowcolor: 'black', // Cambia el color de la flecha
-            arrowsize: arrowsize, // Tamaño de la flecha (ajusta según el tamaño de la ventana)
+            arrowsize: 0.4, // Tamaño de la flecha (ajusta según el tamaño de la ventana)
         },
         {
             x: 0,   // Ajusta la posición relativa para el tercer texto
             y: 0,
             xref: 'paper',
             yref: 'paper',
-            text: '<span style="font-size: 1vw;">¿Sabías que el Mundial de 2026<br> será el primero en la historia en ser organizado por tres países?<br> Estos son: <em style="color:#000000;">Canadá, México y Estados Unidos</em>.</span>',  // Responsivo con colores HTML
+            text: '<span style="font-size: 0.8vw;">¿Sabías que el Mundial de 2026<br> será el primero en la historia en ser organizado por tres países?<br> Estos son: <em style="color:#000000;">Canadá, México y Estados Unidos</em>.</span>',  // Responsivo con colores HTML
             showarrow: false,
             font: {
                 family: 'Helvetica, sans-serif',
