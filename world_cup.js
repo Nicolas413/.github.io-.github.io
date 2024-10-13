@@ -101,7 +101,7 @@ const layout = {
             text: 'Canadá será anfitrión de su <br><span style="color:blue;"> Primer Mundial de Fútbol</span> el <span style="color:blue;">2026</span>',
             showarrow: true,
             arrowhead: 2,
-            ax: -120,   // Desplazamiento de la flecha
+            ax: -160,   // Desplazamiento de la flecha
             ay: -60,
             font: {
                 family: 'Helvetica, sans-serif',
